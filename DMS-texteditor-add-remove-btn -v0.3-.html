@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WTHEAQ - Smart Legal Platform</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/responsive.bootstrap5.min.css" />
+    <link href="css/master.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!---Main Wrapper start--->
+    <div class="wrappper">
+        <div class="leftsidebar">
+            <div class="leftsidebar" dir="rtl">
+                <nav id="sidebar" class="sidebar-wrapper">
+                    <div class="close-menu">
+                        <img src="images/close.png" alt="Dashboard Logo" class="img-fluid" />
+                    </div>
+                    <div class="small-logo">
+                        <a asp-action="Index" asp-controller="Home">
+                            <img src="images/dashboard-logo.png" alt="Dashboard Logo" class="img-fluid" />
+                        </a>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul class="list-unstyled components menu-navigation" dir="rtl">
+                            <li class="sidebar-dropdown">
+                                <a class="linkitem-1 active" asp-action="IndividualDashBoard"
+                                    asp-controller="Individual">
+                                    <span class="nav-icon">
+                                        <img src="images/user/news-black.png" alt="News Library" />
+                                    </span>
+                                    <span class="nav-text">مكتبة الأخبار</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <!-- <ul>
+                                            <li>
+                                                <a href="#">@item.NewsSectionTitleArb </a>
+                                            </li>
+                                        </ul> -->
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a class="linkitem-1" asp-action="LawLibrary" asp-controller="Individual">
+                                    <span class="nav-icon">
+                                        <img src="images/user/law.png" alt="Event" />
+                                    </span>
+                                    <span class="nav-text">المكتبة القانونية</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="#">إدارة العروض الترويجية</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">إدارة الفعاليات </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a class="linkitem-1" href="#">
+                                    <span class="nav-icon">
+                                        <img src="images/user/news-library.png" alt="Legal clinic" />
+                                    </span>
+                                    <span class="nav-text">إدارة المستندات القانوني</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a asp-action="Index" asp-controller="News">مكتبة النماذج</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">مستندات إضافية </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">إدارة المستندات</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">نماذج إضافية</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a class="linkitem-1" href="#">
+                                    <span class="nav-icon">
+                                        <img src="images/user/subscription-black.png" alt="Subscription" />
+                                    </span>
+                                    <span class="nav-text">الإشتراك</span>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="#">إدارة المستندات القانونية</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">إدارة بيانات الخدمات</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">إدارة بيانات الجهات</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="right-sec" dir="rtl">
+            <div class="main-content">
+                <!-- Top Header Section -->
+                <div class="header-inner">
+                    <nav class="navbar navbar-dark navbar-expand-sm nav-1 justify-content-end">
+                        <ul class="navbar-nav">
+                            <li>
+                                <div class="header1 ms-4 d-md-none">
+                                    <div class="humbargur-button">
+                                        <div class="bar1"></div>
+                                        <div class="bar2"></div>
+                                        <div class="bar3"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="top-profile d-flex">
+                                        <div class="profile-img ms-3">
+                                            <img src="images/profile.png" class="rounded-circle" alt="note">
+                                        </div>
+                                        <div class="profile-name ms-3">
+                                            <p class="profile-name">محمد علي</p>
+                                            <p class="profile-email">runnik@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">تعديل الملف الشخصي</a>
+                                    <a class="dropdown-item" href="#">تسجيل خروج</a>
+                                </div>
+                            </li>
+                            <li class="nav-item notification-section">
+                                <a href="#" class="nav-link notification"><img src="images/notification.png"
+                                        alt="note" /><span class="badge-1"></span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Top Header section End -->
+                <!-- Main section Start -->
+                <div class="main-section">
+                    <!-- breadcrumbs Start -->
+                    <div class="inner-page inner-heading">
+                        <div class="page-bttn document-name-div">
+                            <div class="docment-text-heading me-3">
+                                <p>إسم المستند</p>
+                            </div>
+                            <div class="icon-div">
+                                <div class="text-editor-icons ms-2">
+                                    <img src="images/save-icon.png" class="rounded-circle" alt="save">
+                                </div>
+                                <div class="text-editor-icons ms-2">
+                                    <img src="images/delete-icon.png" class="rounded-circle" alt="delete">
+                                </div>
+                                <div class="text-editor-icons ms-3">
+                                    <img src="images/edit-icon.png" class="rounded-circle" alt="edit-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- breadcrumbs Start -->
+                    <div class="inner-background inner-page mt-4">
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="inner-heading">
+                                                <div class="page-bttn">
+                                                    <!-- <p data-bs-toggle="modal" data-bs-target="#model-pp2">model-2</p>
+														      <p data-bs-toggle="modal" data-bs-target="#model-pp3">model-3</p>
+															   <p data-bs-toggle="modal" data-bs-target="#model-pp41">model-41</p>-->
+                                                    <button type="button"
+                                                        class="btn save-bttn text-editor-btn px-2"> المكتبة القانونية الشاملة</button>
+                                                </div>
+												 <!---checkbox dropdown button section-->
+                                             <div class="down-arrow mt-2">
+                                                    <button class="btn-secondary dropdown-btn" type="button" id="dropdown-btnone">المصدر<i class="fa fa-angle-down"></i></button>
+                                                    <div class="dropdown-openone">
+                                                        <div class="inner-list check-box mt-3">
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp1">الأنظمة</label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp2">الموسوعة الفقهية
+</label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp3"> المبادئ القضائية</label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp4">التعاميم</label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp5">الأحكام القضائية
+ </label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp6">القواعد القضائية
+ </label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp7">اللوائح التنفيذية والمستندات التابعة للأنظمة
+ </label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp8">القرآن</label>
+                                                            </div>
+                                                            <div class="mb-3 form-check">
+                                                                <input type="checkbox" class="form-check-input" />
+                                                                <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#model-pp9">الحديث</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+												
+                                            </div>
+                                           
+
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="inner-heading d-flex">
+                                                <div class="page-title text-editor-title">
+                                                    <h2>مساحة التعديل</h2>
+                                                </div>
+                                            </div>
+                                            <div class="mb-4 floating-label-group mt-3 text-editor-div" dir="rtl"
+                                                id="scroll">
+                                                <textarea id="textArea" name="textArea" dir="rtl"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Section End -->
+            </div>
+            <!-- <footer>
+            <p>© 2021 Copyright Taxsharp</p>
+        </footer> -->
+        </div>
+    </div>
+    <!---Main Wrapper End--->
+
+    <!-- News Details Modal Popup Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp1" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">الأنظمة واللوائح</h2>
+                            </div>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">إسم النظام</label>
+                                            <select class="form-select form-control">
+                                                <option>اختر إسم النظام</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">حالة النظام</label>
+                                            <input type="text" class="form-control" placeholder="ساري" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">تاريخ إصدار النظام</label>
+                                            <input type="text" class="form-control" placeholder="12/12/1444 ه" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                     <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label"> نوع النظام</label>
+                                            <select class="form-select form-control">
+                                                <option>اختر  نوع النظام</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">رقم المادة</label>
+                                            <select class="form-select form-control">
+                                                <option>اختر رقم المادة</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">تاريخ االبدء في تنفيذ النظام</label>
+                                            <input type="text" class="form-control" placeholder="12/12/1444 ه" />
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="row">
+                                     <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">تاريخ آخر تعديل على النظام</label>
+                                            <input type="text" class="form-control" placeholder="12/12/1444 ه" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">العقوبات والغرامات</label>
+                                            <select class="form-select form-control">
+                                                <option>اختر العقوبات والغرامات</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                 
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">جهة إصدار النظام</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="صادر عن القرار الملكي" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+<!--
+                                    <div class="inner-page inner-heading">
+                                        <div class="page-bttn legal-page-btn ms-3">
+                                            <button type="button" class="btn save-bttn">بحث</button>
+                                        </div>
+                                    </div>
+-->
+                                    <table id="" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-size: 14px;font-weight: 700;color: #191919">رقم المادة</th>
+                                                <th style="font-size: 18px;font-weight: 700;color: #191919">نص المادة</th>
+                                                <th style="font-size: 18px;font-weight: 700;color: #191919">الإجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp1-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp1-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp1-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp1-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- News Details Modal Popup 2 Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp2" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">الموسوعة الفقهية</h2>
+                            </div>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">عنوان الكتاب</label>
+                                            <select class="form-select form-control">
+                                                <option>كتابة الطهارة، كتاب النكاح، كتاب النفقات</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">عنوان الباب</label>
+                                            <select class="form-select form-control">
+                                                <option>كتابة الطهارة، كتاب النكاح، كتاب النفقات</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">عنوان الفصل</label>
+                                            <select class="form-select form-control">
+                                                <option>كتابة الطهارة، كتاب النكاح، كتاب النفقات</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+<!--
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">عنوان المطلب</label>
+                                            <select class="form-select form-control">
+                                                <option>كتابة الطهارة، كتاب النكاح، كتاب النفقات</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">عنوان المسألة</label>
+                                            <select class="form-select form-control">
+                                                <option>كتابة الطهارة، كتاب النكاح، كتاب النفقات</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+-->
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+<!--
+                                    <div class="inner-page inner-heading">
+                                        <div class="page-bttn legal-page-btn ms-3">
+                                            <button type="button" class="btn save-bttn">بحث</button>
+                                        </div>
+                                    </div>
+-->
+                                    <table id="" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-size: 14px;font-weight: 700;color: #191919">رقم المبحث</th>
+                                                <th style="font-size: 18px;font-weight: 700;color: #191919">عنوان المبحث</th>
+                                                <th style="font-size: 18px;font-weight: 700;color: #191919">الإجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">المبحث الأول </p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp2-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                     <p class="newstable-heading">المبحث الأول </p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp2-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">عنوان المبحث</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp2-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">عنوان المبحث</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp2-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- News Details Modal Popup 3 Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp3" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">المبادئ القضائية</h2>
+                            </div>
+                            <div class="form-box">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="form-group mb-3 selectdiv">
+                                                <label  class="form-label">اسم المحكمة</label>
+                                                <select  class="form-select form-control">
+                                                    <option>آيات الالمبادئ القضائية طلاق</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                          <div class="col-md-6 col-sm-12">
+                                            <div class="form-group mb-3 selectdiv">
+                                                <label  class="form-label"> تصنيف المبدأ القضائي</label>
+                                                <select  class="form-select form-control">
+                                                    <option>تصنيف المبدأ القضائي</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+<!--
+                                    <div class="inner-page inner-heading">
+                                        <div class="page-bttn legal-page-btn ms-3">
+                                            <button type="button" class="btn save-bttn">بحث</button>
+                                        </div>
+                                    </div>
+-->
+                                    <table id="" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                             <tr >
+                                                    <th style="font-size: 14px;font-weight: 700;color: #191919">ملخص المبدأ</th>
+                                                    <th style="font-size: 18px;font-weight: 700;color: #191919">نص المبدأ</th>
+                                                    <th style="font-size: 18px;font-weight: 700;color: #191919">الإجراء</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">عنوان المبحث</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp3-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">عنوان المبحث</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp3-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">عنوان المبحث</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp3-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">عنوان المبحث</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp3-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- circular Modal Popup 3 Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp4" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">التعاميم</h2>
+                            </div>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">موضوع التعميم</label>
+                                            <select class="form-select form-control">
+                                                <option>تعزير،حوادث،الديات، الطب</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+                                    <div class="inner-page inner-heading">
+                                        <div class="page-bttn legal-page-btn ms-3">
+                                            <button type="button" class="btn save-bttn">بحث</button>
+                                        </div>
+                                    </div>
+                                    <table id="" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>تاريخ التعميم</th>
+                                                <th>نص التعميم</th>
+                                                <th>الإجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">22/5/1444 ه</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp4-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">22/5/1444 ه</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp4-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">22/5/1444 ه</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp4-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">22/5/1444 ه</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp4-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Judicial decisions Modal Popup 4 Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp5" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">الأحكام القضائية</h2>
+                            </div>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">الاختصاص</label>
+                                            <select class="form-select form-control">
+                                                <option>الاختصاص</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">التصنيف العام</label>
+                                            <select class="form-select form-control">
+                                                <option>التصنيف العام</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                      <div class="col-md-3">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">التصنيف الفرعي</label>
+                                            <select class="form-select form-control">
+                                                <option>التصنيف الفرعي</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                      <div class="col-md-3">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">السنة</label>
+                                            <select class="form-select form-control">
+                                                <option> السنة</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+<!--
+                                    <div class="inner-page inner-heading">
+                                        <div class="page-bttn legal-page-btn ms-3">
+                                            <button type="button" class="btn save-bttn">بحث</button>
+                                        </div>
+                                    </div>
+-->
+                                    <table id="" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-size: 14px;font-weight: 700;color: #191919">رقم القضية</th>
+                                                <th style="font-size: 18px;font-weight: 700;color: #191919">نص تسبب الحكم</th>
+                                                <th style="font-size: 18px;font-weight: 700;color: #191919">الإجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">1</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp5-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp5-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">3</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp5-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">4</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp5-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Judicial rules Modal Popup 5 Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp6" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">القواعد القضائية</h2>
+                            </div>
+                            <div class="form-box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3 selectdiv">
+                                                <label  class="form-label">نوع المحكمة</label>
+                                                <select  class="form-select form-control">
+                                                    <option>نوع المحكمة</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3 selectdiv">
+                                                <label  class="form-label"> المصدر</label>
+                                                <select  class="form-select form-control">
+                                                    <option>الموقع</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3 selectdiv">
+                                                <label  class="form-label"> الإختصاص</label>
+                                                <select  class="form-select form-control">
+                                                    <option>الإختصاص</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+<!--
+                                    <div class="inner-page inner-heading">
+                                        <div class="page-bttn legal-page-btn ms-3">
+                                            <button type="button" class="btn save-bttn">بحث</button>
+                                        </div>
+                                    </div>
+-->
+                                    <table id="" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                    <th style="font-size:14px;font-weight: 700;color: #191919">رقم القاعدة</th>
+                                                    <th style="font-size: 18px;font-weight: 700;color: #191919">نص القاعدة</th>
+                                                    <th style="font-size: 18px;font-weight: 700;color: #191919">الإجراء</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">1</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp6-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp6-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">3</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp6-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">4</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى،</td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp6-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Implementing regulations and documents related to the systems Modal Popup 6 Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp7" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">اللوائح التنفيذية والمستندات التابعة للأنظمة</h2>
+                            </div>
+                            <div class="form-box">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">إسم النظام</label>
+                                            <select class="form-select form-control">
+                                                <option>اختر إسم النظام</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">حالة النظام</label>
+                                            <input type="text" class="form-control" placeholder="ساري" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">تاريخ إصدار النظام</label>
+                                            <input type="text" class="form-control" placeholder="12/12/1444 ه" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">رقم المادة</label>
+                                            <select class="form-select form-control">
+                                                <option>اختر رقم المادة</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">تاريخ االبدء في تنفيذ النظام</label>
+                                            <input type="text" class="form-control" placeholder="12/12/1444 ه" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">تاريخ آخر تعديل على النظام</label>
+                                            <input type="text" class="form-control" placeholder="12/12/1444 ه" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">العقوبات والغرامات</label>
+                                            <select class="form-select form-control">
+                                                <option>اختر العقوبات والغرامات</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">جهة إصدار النظام</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="صادر عن القرار الملكي" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">جهة إصدار النظام</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="صادر عن القرار الملكي" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic">
+                                <div class="recent-news">
+<!--
+                                    <div class="inner-page inner-heading">
+                                        <div class="page-bttn legal-page-btn ms-3">
+                                            <button type="button" class="btn save-bttn">بحث</button>
+                                        </div>
+                                    </div>
+-->
+                                    <table id="" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-size: 14;font-weight: 700;color: #191919">رقم الفقرة</th>
+                                                <th style="font-size: 18;font-weight: 700;color: #191919">نص الاستدلال</th>
+                                                <th style="font-size: 18;font-weight: 700;color: #191919">الإجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp7-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp7-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp7-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="news-title">
+                                                    <p class="newstable-heading">2</p>
+                                                </td>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp7-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Implementing regulations and documents related to the systems Modal Popup 7 Start -->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp8" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">القرآن</h2>
+                            </div>
+                            <div class="form-box">
+							<div class="row mb-3">
+							<div class="col-8">
+									<div id="" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="ابحث في القائمة" aria-controls="usertableeight"></label></div>
+								</div>
+							        <div class="col-4 inner-page inner-heading">
+                                        <div class="">
+                                          
+																					<div class="dropdown">
+																					  <button class="btn btn-secondary quran-btn btn save-bttn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+																					بحث بالموضوع
+																					  </button>
+																					  <ul class="dropdown-menu">
+																						<li><a class="dropdown-item" href="#">Static data</a></li>
+																					
+																					
+																					  </ul>
+																					</div>
+                                        </div>
+                                    </div>
+								
+							</div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">الموضوع الرئيسي</label>
+                                            <select class="form-select form-control">
+                                                <option>الأسرة</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                <div class="col-md-6">
+                                        <div class="form-group mb-3 selectdiv">
+                                            <label class="form-label">الموضوع الفرعي</label>
+                                            <select class="form-select form-control">
+                                                <option> زواج</option>
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic quran-table">
+                                <div class="recent-news">
+                                  
+                                    <table id="usertableeight" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+
+                                                <th>نص الآية</th>
+                                                <th>الإجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp8-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp8-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp8-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp8-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	  <!-- View template Modal Popup Start -->
+    <div class="news-popup subscription-popup-section" dir="rtl">
+        <div class="modal fade" id="viewpopup" tabindex="-1">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body padding-section">
+
+                        <div class="news-content">
+                            <div class="subscription-heading mb-4 text-center">
+                                <h3 id="newsTitleModalone">ادخل العنوان المختصر للعلامة المرجعية</h3>
+                                <p>يمكنكم اضافة عنوان مختصر للعلامة المرجعية والتي تسهل لكم الرجوع لها أثناء صياغة
+                                    وكتابة اي مستند قانوني</p>
+                            </div>
+                        </div>
+                        <div class="form-section">
+
+                            <div class="form-box">
+                                <div class="row">
+								 <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label for="w3review" class="mb-2">نص المبحث</label>
+                                        <textarea id="w3review" class="textarea" name="w3review" rows="6" cols="50"></textarea>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+
+
+                                </div>
+                                <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                            </div>
+                            <div class="subscription-bottom-btn">
+                                <button type="button" class="btn subscription-btn-add mt-4">إضافة</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- template Modal Popup Start -->
+    <div class="news-popup subscription-popup-section" dir="rtl">
+        <div class="modal fade" id="addpopup" tabindex="-1">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body padding-section">
+
+                        <div class="news-content">
+                            <div class="subscription-heading mb-4 text-center">
+                                <h3 id="newsTitleModalone">ادخل العنوان المختصر للعلامة المرجعية</h3>
+                                <p>يمكنكم اضافة عنوان مختصر للعلامة المرجعية والتي تسهل لكم الرجوع لها أثناء صياغة
+                                    وكتابة اي مستند قانوني</p>
+                            </div>
+                        </div>
+                        <div class="form-section">
+
+                            <div class="form-box">
+                                <div class="row">
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">العنوان</label>
+                                            <input type="text" class="form-control" placeholder="أضف عنوان" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+
+                                </div>
+                                <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                            </div>
+                            <div class="subscription-bottom-btn">
+                                <button type="button" class="btn subscription-btn-add mt-4">إضافة</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------viewmodels 1------->
+    <div class="news-popup" dir="rtl">
+        <div class="modal fade" id="model-pp1-view" tabindex="-1">
+            <div class="modal-dialog tempb modal-dialog-centered">
+                <div class="modal-content px-2">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">الأنظمة واللوائح</h2>
+                            </div>
+                            <div class="form-box">
+                                <div class="row">
+                                     <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">اسم النظام</label>
+                                            <input type="text" class="form-control" placeholder="اسم النظام" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">رقم المادة</label>
+                                            <input type="text" class="form-control" placeholder="12456" />
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="row">
+
+                                   
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">حالة المادة </label>
+                                            <input type="text" class="form-control" placeholder="حالة المادة" />
+                                        </div>
+                                    </div>
+                                     <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">تاريخ آخر تعديل على المادة</label>
+                                            <input type="text" class="form-control" placeholder="23 May 2023" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <p><label for="w3review">النص</label></p>
+                                            <textarea id="w3review" class="textarea" name="w3review" rows="10" cols="50"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+							<div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-2">إضافة</button>
+
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-------viewmodels 2------->
+ <div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-pp2-view" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content px-2">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-section">
+                        <div class="form-heading mb-4">
+                            <h2 class="mb-3 greentext">الموسوعة الفقهية</h2>
+                        </div>
+                        <div class="form-box">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">عنوان المبحث</label>
+                                        <input type="text" class="form-control" placeholder="عنون المبحث" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">عنوان الكتاب</label>
+                                        <input type="text" class="form-control" placeholder="عنوان الكتاب" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">عنوان الباب</label>
+                                        <input type="text" class="form-control" placeholder="عنوان الباب" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                               
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">عنوان الفصل</label>
+                                        <input type="text" class="form-control" placeholder="عنوان الفصل" />
+                                    </div>
+                                </div>
+<!--
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">مسائل ذات علاقة</label>
+                                        <input type="text" class="form-control" placeholder="مسائل ذات علاقة" />
+                                    </div>
+                                </div>
+-->
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <p><label for="w3review">نص المبحث</label></p>
+                                        <textarea id="w3review" class="textarea" name="w3review" rows="10" cols="50"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+						<div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-2">إضافة</button>
+
+                            </div>
+                        <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-------viewmodels 3------->
+ <div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-pp3-view" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-3">
+                    <div class="form-section">
+                        <div class="form-heading mb-4">
+                            <h2 class="mb-3 greentext">المبادئ القضائية</h2>
+                        </div>
+                        <div class="form-box">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">عنوان المبدأ</label>
+                                        <input type="text" class="form-control" placeholder="قرار إداري - دعوى اللغاء - مفهومها" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    
+                                          <div class="form-group mb-3">
+                                         <label class="form-label">القضية المرتبطة بالمبدأ</label>
+                                                   <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected">
+                                                            <input
+    type="text" class="form-control" placeholder="اسم القضية"
+    aria-describedby="basic-addon1"
+  /><span
+                                                                class="input-group-addon bootstrap-touchspin-postfix input-group-append py-2 px-3"
+                                                                style="background-color: #006B59;color: #fff;    width: 60px;
+    border-radius: 4px">
+                                                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.99 17.5H16.5C19.52 17.5 22 15.03 22 12C22 8.98 19.53 6.5 16.5 6.5H14.99M9 6.5H7.5C6.04212 6.50264 4.64471 7.08295 3.61383 8.11383C2.58295 9.14471 2.00264 10.5421 2 12C2 15.02 4.47 17.5 7.5 17.5H9M8 12H16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</span>
+
+                                                        </div>
+                                              
+                                       
+                                       
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <p><label for="w3review">نص المبدأ</label></p>
+                                        <textarea id="w3review" class="textarea" name="w3review" rows="10" cols="50"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+						<div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-2">إضافة</button>
+
+                            </div>
+                        <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------viewmodels 4------->
+<div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-pp4-view" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-section">
+                        <div class="form-heading mb-4">
+                            <h2 class="mb-3 greentext">التعاميم</h2>
+                        </div>
+                        <div class="form-box">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">موضوع التعميم</label>
+                                        <input type="text" class="form-control" placeholder="موضوع التعميم" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">تاريخ التعميم</label>
+                                        <input type="text" class="form-control" placeholder="تاريخ التعميم" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">رقم التعميم</label>
+                                        <input type="text" class="form-control" placeholder="رقم التعميم" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <p><label for="w3review">نص التعميم</label></p>
+                                        <textarea id="w3review" class="textarea" name="w3review" rows="10" cols="50"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+						<div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-4">إضافة</button>
+
+                            </div>
+                        <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------viewmodels 5------->
+<div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-pp5-view" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-section">
+                        <div class="form-heading mb-4">
+                            <h2 class="mb-3 greentext">الأحكام القضائية</h2>
+                        </div>
+                        <div class="form-box px-3">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">رقم القضية</label>
+                                        <input type="text" class="form-control" placeholder="رقم القضية" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">إسم المكتبة ( المصدر )</label>
+                                        <input type="text" class="form-control" placeholder="إسم المكتبة ( المصدر )" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">رابط القضية</label>
+                                        <input type="text" class="form-control" placeholder="رابط القضية" />
+                                        <img src="images/add-icon.png" alt="login-password" class="view-input-img">
+                                    </div>
+                                </div>
+                             
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">المدعى </label>
+                                        <input type="text" class="form-control" placeholder="المدعى " />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">المدعى عليه</label>
+                                        <input type="text" class="form-control" placeholder="المدعى عليه" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">تاريخ القضية </label>
+                                        <input type="text" class="form-control" placeholder="تاريخ القضية " />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 tabs-area">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">نص القضية</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">الوقائع</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">التسبب</button>
+                                        </li>
+
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-four" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">الحكم</button>
+                                          </li>
+                                          <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-five" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">الإستئناف</button>
+                                          </li>
+                                        
+                                      </ul>
+                                      <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+
+                                        <div class="tab-pane fade show" id="pills-four" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+                                        <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+                                     
+                                      </div>
+                                </div>
+                               
+                            </div>
+
+                        </div>
+						<div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-2">إضافة</button>
+
+                            </div>
+                        <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------viewmodels 6------->
+<div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-pp6-view" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content px-3">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div class="form-section">
+                        <div class="form-heading mb-4">
+                            <h2 class="mb-3 greentext">القواعد القضائية</h2>
+                        </div>
+                        <div class="form-box">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">عنوان القاعدة</label>
+                                        <input type="text" class="form-control" placeholder="عدم اختصاص المحاكم التجارية في شراكة العقار إن كان ً محددا" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">رقم القاعدة</label>
+                                        <input type="text" class="form-control" placeholder="رقم القاعدة" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">الإختصاص</label>
+                                        <input type="text" class="form-control" placeholder="الإختصاص" />
+                                    </div>
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">نوع المحكمة</label>
+                                        <input type="text" class="form-control" placeholder="نوع المحكمة" />
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">اسم المصدر</label>
+                                        <input type="text" class="form-control" placeholder="اسم المصدر" />
+                                    </div>
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">مرجعية الحكم في القضية</label>
+                                        <input type="text" class="form-control" placeholder="مرجعية الحكم في القضية" />
+                                    </div>
+                                </div>
+                                
+                              <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <p><label for="w3review">موضع الشاهد من الحكم</label></p>
+                                        <textarea id="w3review" class="textarea" name="w3review" rows="10" placeholder="الحكم في القضية رقم (٤٤٢٧/ق للعام ١٤٣٨هـ)
+" cols="50"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+<!--
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">المدعى </label>
+                                        <input type="text" class="form-control" placeholder="المدعى " />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">المدعى عليه</label>
+                                        <input type="text" class="form-control" placeholder="المدعى عليه" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 tabs-area">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">نص القضية</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">الوقائع</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">التسبب</button>
+                                        </li>
+
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-four" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">الحكم</button>
+                                          </li>
+                                          <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-five" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">الإستئناف</button>
+                                          </li>
+                                        
+                                      </ul>
+                                      <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+
+                                        <div class="tab-pane fade show" id="pills-four" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+                                        <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+                                     
+                                      </div>
+                                </div>
+                               
+                            </div>
+-->
+
+                        </div>
+						<div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-2">إضافة</button>
+
+                            </div>
+                        <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-------viewmodels 7------->
+  <div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-pp7-view" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-section">
+                        <div class="form-heading mb-4">
+                            <h2 class="mb-3 greentext">اللوائح التنفيذية والمستندات التابعة للأنظمة</h2>
+                        </div>
+                        <div class="form-box">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">عنوان القاعدة</label>
+                                        <input type="text" class="form-control" placeholder="عدم اختصاص المحاكم التجارية في شراكة العقار إن كان ً محددا" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">مراجعة الحكم في القضية المرتبطة</label>
+                                        <input type="text" class="form-control" placeholder=" الحكم في القضية رقم (٤٤٢٧/ق للعام ١٤٣٨هـ)" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">الإختصاص</label>
+                                        <input type="text" class="form-control" placeholder=" الحكم في القضية رقم (٤٤٢٧/ق للعام ١٤٣٨هـ)" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">القاعدة</label>
+                                        <input type="text" class="form-control" placeholder="عدم جواز إخراج الشريك من الشركة ذات المسؤولية المحدودة." />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <p><label for="w3review">موضع الشاهد من الحكم</label></p>
+                                        <textarea id="w3review" class="textarea" name="w3review" rows="10" cols="50"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+							<div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-4">إضافة</button>
+
+                            </div>
+                        <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-------viewmodels 8------->
+ <div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-pp8-view" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                 <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">القرآن</h2>
+                            </div>
+                            <div class="form-box">
+							<div class="row mb-3">
+							<div class="col-8">
+									<div id="" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="ابحث في القائمة" aria-controls="usertableeight"></label></div>
+								</div>
+							        <div class="col-4 inner-page inner-heading">
+                                        <div class="">
+                                          
+																					<div class="dropdown">
+																					  <button class="btn btn-secondary quran-btn btn save-bttn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+																				بحث شامل
+																					  </button>
+																					  <ul class="dropdown-menu">
+																						<li><a class="dropdown-item" href="#">Static data</a></li>
+																					
+																					
+																					  </ul>
+																					</div>
+                                        </div>
+                                    </div>
+								
+							</div>
+                               
+
+
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                        <div class="library-datatable mb-3 mb-md-0">
+                            <div class="news-section datatable-arabic quran-table-veiw">
+                                <div class="recent-news">
+                                  
+                                    <table id="usertableeight-view" class="news-datatable table dt-responsive nowrap"
+                                        style="width: 100%;">
+                                        <thead>
+                                            <tr>
+
+                                                <th>نص الآية</th>
+                                                <th>الإجراء</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon"  data-bs-toggle="modal" data-bs-target="#model-view-inner"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp8-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp8-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+                                                    النص من مولد النص العربى، </td>
+                                                <td>
+                                                    <div>
+                                                        <span class="padding-icon"><img src="images/plus-black.png"
+                                                                class="rounded-circle" alt="tabicon"></span>
+                                                        <span class="padding-icon"><img src="images/eye-black.png"
+                                                                class="rounded-circle" alt="tabicon" data-bs-toggle="modal"
+                                                                data-bs-target="#model-pp8-view"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-------viewmodels 8------->
+ <div class="news-popup" dir="rtl">
+    <div class="modal fade" id="model-view-inner" tabindex="-1">
+        <div class="modal-dialog tempb modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close circle-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                 <div class="modal-body">
+                        <div class="form-section">
+                            <div class="form-heading mb-4">
+                                <h2 class="mb-3 greentext">القرآن</h2>
+                            </div>
+                            <div class="form-box">
+							<div class="row mb-3">
+							<div class="col-12">
+									<div id="" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="ابحث في القائمة" aria-controls="usertableeight"></label></div>
+								</div>
+							        <div class="col-4 inner-page inner-heading">
+                                        <div class="">
+                                          
+																					<div class="dropdown">
+																					  <button class="btn btn-secondary quran-btn btn save-bttn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+																				بحث بالآية والسورة
+																					  </button>
+																					  <ul class="dropdown-menu">
+																						<li><a class="dropdown-item" href="#">Static data</a></li>
+																					
+																					
+																					  </ul>
+																					</div>
+                                        </div>
+                                    </div>
+								
+							</div>
+                                <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">إسم السورة</label>
+                                        <input type="text" class="form-control" placeholder="سورة الاسراء" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">رقم الآية</label>
+                                        <input type="text" class="form-control" placeholder="12" />
+                                    </div>
+                                </div>
+                               
+                              <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <p><label for="w3review">موضع الشاهد من الحكم</label></p>
+                                        <textarea id="w3review" class="textarea" name="w3review" rows="10" cols="50"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            </div>
+							 <div class="model-bottom-btn">
+                                <button type="button" class="btn model-btn-add mt-4">إضافة</button>
+
+                            </div>
+                            <!----  <button type="button" class="btn btn-submit mt-4" id="legalPractice">إنشاء حساب</button>----->
+                        </div>
+
+                   
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <script src="js/responsive.bootstrap5.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!----texteditor-->
+    <script src="js/tinymce.min.js"></script>
+    <!-- Javascript End -->
+    <script>
+      
+    </script>
+</body>
+
+</html>
